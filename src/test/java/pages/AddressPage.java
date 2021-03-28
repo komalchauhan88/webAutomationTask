@@ -9,6 +9,6 @@ public class AddressPage extends BasePage {
     private Button proceedToCheckout = new Button("processAddress", Element.LocatorType.NAME);
 
     public void proceedToCheckout() {
-        proceedToCheckout.submit();
+        proceedToCheckout.click();
     }
 }

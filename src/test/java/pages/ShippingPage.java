@@ -7,16 +7,16 @@ import framework.setup.BasePage;
 
 public class ShippingPage extends BasePage {
 
-    private CheckBoxElement agreeToTerms = new CheckBoxElement(".checker input", Element.LocatorType.CSS_SELECTOR);
+    private CheckBoxElement agreeToTerms = new CheckBoxElement(".checkbox #uniform-cgv", Element.LocatorType.CSS_SELECTOR);
 
     private Button proceedToCheckoutButton = new Button(".cart_navigation.clearfix .standard-checkout", Element.LocatorType.CSS_SELECTOR);
 
     public void agreeToTermsAndCondition() {
-        agreeToTerms.check();
+        agreeToTerms.click();
     }
 
     public void proceedToCheckOut() {
-        proceedToCheckoutButton.submit();
+        proceedToCheckoutButton.click();
     }
 
 }

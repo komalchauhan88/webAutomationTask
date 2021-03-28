@@ -14,9 +14,10 @@ public class LoginPage extends BasePage {
     private Button signIn = new Button("SubmitLogin", Element.LocatorType.ID);
 
     public void login(String user, String pass) {
+        driver.get("http://automationpractice.com/index.php?controller=my-account");
         username.clearandType(user);
         password.clearandType(pass);
-        signIn.submit();
+        signIn.click();
     }
 
 }

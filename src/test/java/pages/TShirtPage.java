@@ -18,6 +18,6 @@ public class TShirtPage extends BasePage {
     }
 
     public void proceedToCheckout() {
-        proceedToCheckoutButton.submit();
+        proceedToCheckoutButton.click();
     }
 }

@@ -3,16 +3,13 @@ package framework.setup;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
+
 
 import drivers.DriverFactory;
+import org.testng.ITestContext;
 
 public class WebTest {
 
-
-    /**
-     * The WebDriver driver
-     */
     protected WebDriver driver;
 
     @BeforeClass

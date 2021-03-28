@@ -19,18 +19,12 @@ public class DriverFactory {
 
     public static synchronized WebDriver getDriver() {
 
-//        if (driverThread.get().getDriver() != null) {
-//        }
-
         initiateDriver("chrome");
-
         return driverThread.get().getDriver();
     }
 
     public static synchronized void quitDriver() {
-        if (!((driverThread.get().getDriver()) == null)) {
-            driverThread.get().getDriver().quit();
-        }
+        driverThread.get().getDriver().quit();
         driverThread.remove();
     }
 

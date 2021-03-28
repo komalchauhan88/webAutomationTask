@@ -16,16 +16,16 @@ public class PaymentPage extends BasePage {
     private Element orderReferenceLine = new Element(".box br", Element.LocatorType.CSS_SELECTOR);
 
     public void payByBankWire() {
-        bankWire.submit();
+        bankWire.click();
     }
 
     public void clickOnConfirmOrder() {
-        confirmOrder.getElements().get(1).submit();
+        confirmOrder.getElements().get(1).click();
     }
 
     public String getOrderReferenceNumber() {
         int locationOfNumber = 0;
-        List<String> ls = Arrays.asList(orderReferenceLine.getText().split(" "));
+        List<String> ls = Arrays.asList(orderReferenceLine.getElements().get(5).getText().split(" "));
         for (int i = 0; i < ls.size(); i++) {
             if (ls.get(i).equalsIgnoreCase("reference")) {
                 locationOfNumber = i + 1;
